@@ -2,7 +2,7 @@
 const site = {
   name: "Nexfase",
   tagline: "Supply chain solutions for food and beverage businesses",
-  email: "dongjie@nexfase.com.au",
+  email: "info@nexfase.com.au",
   phone: "+61 400 000 000",
 };
 ---
@@ -217,28 +217,31 @@ const site = {
           <li>Fast response and ongoing support you can rely on.</li>
         </ul>
       </section>
+
+      <!-- REACH OUT -->
       <section>
-        <form id="contact" method="POST" action="https://astro-blog-starter-template-nexfase.knowingdj.workers.dev/contact">
-          <label>
-            Name
-            <input type="text" name="name" required />
-          </label>
+        <form id="contact" method="POST" action="https://astro-blog-starter-template-nexfase.knowingdj.workers.dev/contact" class="contact-form">
+    
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required />
+          </div>
 
-          <label>
-            Email
-            <input type="email" name="email" required />
-          </label>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" type="email" name="email" required />
+          </div>
 
-          <label>
-            Message
-            <textarea name="message" required></textarea>
-          </label>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
 
-          <button type="submit">Send</button>
+          <button type="submit">Send Message</button>
         </form>
       </section>
 
-      <!-- CONTACT -->
+      
       <footer>
         <p><strong>Contact</strong></p>
         <p><a href="mailto:{site.email}">{site.email}</a> </p>
