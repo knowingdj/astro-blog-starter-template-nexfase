@@ -1,7 +1,7 @@
 ---
 const site = {
   name: "Nexfase",
-  tagline: "Supply chain solutions for food and beverage businesses.",
+  tagline: "Supply chain solutions for food and beverage businesses",
   email: "dongjie@nexfase.com.au",
   phone: "+61 400 000 000",
 };
@@ -162,7 +162,25 @@ const site = {
         </ul>
       </section>
 
-      
+<form id="contact" method="POST" action="https://astro-blog-starter-template-nexfase.knowingdj.workers.dev/contact">
+  <label>
+    Name
+    <input type="text" name="name" required />
+  </label>
+
+  <label>
+    Email
+    <input type="email" name="email" required />
+  </label>
+
+  <label>
+    Message
+    <textarea name="message" required></textarea>
+  </label>
+
+  <button type="submit">Send</button>
+</form>
+
 
       <!-- CONTACT -->
       <footer>
