@@ -219,25 +219,27 @@ const site = {
       <!-- REACH OUT -->
       <section>
         <h2>Reach Out</h2>  
-        <form id="contact" method="POST" action="https://astro-blog-starter-template-nexfase.knowingdj.workers.dev/contact" class="contact-form">
-    
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" type="text" name="name" required />
+        <form action="/contact" method="POST" class="space-y-6 max-w-lg mx-auto">
+          <div>
+            <label class="block mb-2 text-gray-300">Name</label>
+            <input type="text" name="name" required class="w-full p-3 rounded bg-gray-800 text-white" />
           </div>
 
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" type="email" name="email" required />
+          <div>
+            <label class="block mb-2 text-gray-300">Email</label>
+            <input type="email" name="email" required class="w-full p-3 rounded bg-gray-800 text-white" />
           </div>
 
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
+          <div>
+            <label class="block mb-2 text-gray-300">Message</label>
+            <textarea name="message" required class="w-full p-3 rounded bg-gray-800 text-white h-32"></textarea>
           </div>
 
-          <button type="submit">Send Message</button>
+          <button type="submit" class="px-6 py-3 bg-blue-600 rounded text-white font-semibold">
+            Send Message
+          </button>
         </form>
+
       </section>
 
       <!-- Contact -->
