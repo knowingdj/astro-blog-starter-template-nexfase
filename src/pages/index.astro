@@ -1,9 +1,8 @@
 ---
-
 const site = {
   name: "Nexfase",
-  tagline: "System maintenance and IT support for food and restaurant supply chains platforms.",
-  email: "info@nexfase.com.au",
+  tagline: "Reliable IT & supply chain solutions for food and restaurant businesses.",
+  email: "hello@nexfase.com",
   phone: "+61 400 000 000",
 };
 ---
@@ -14,44 +13,117 @@ const site = {
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{site.name}</title>
     <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
       :root {
-        --max-width: 820px;
-        --text-color: #1d1d1f;
-        --subtle-text: #6e6e73;
+        --max-width: 900px;
+        --primary-color: #00d084;
+        --bg-color: #121212;
+        --section-bg: #1f1f1f;
+        --text-color: #ffffff;
+        --subtle-text: #b3b3b3;
         --line-height: 1.6;
         --radius: 12px;
+        --shadow: 0 4px 12px rgba(0,0,0,0.6);
       }
+
       body {
-        font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
         margin: 0;
         padding: 0;
         color: var(--text-color);
         line-height: var(--line-height);
-        background: #fafafa;
+        background-color: var(--bg-color);
       }
+
       .container {
         max-width: var(--max-width);
         margin: 0 auto;
-        padding: 48px 24px 80px;
+        padding: 64px 24px 100px;
       }
-      h1 { font-size: 2.4rem; margin-bottom: 12px; }
-      h2 { margin-top: 56px; margin-bottom: 12px; font-size: 1.6rem; }
-      p, li { color: var(--text-color); }
-      .hero { margin-top: 40px; }
-      .tagline { font-size: 1.2rem; color: var(--subtle-text); max-width: 520px; }
-      section { margin-top: 40px; background: white; padding: 28px 32px; border-radius: var(--radius); box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-      ul { padding-left: 20px; }
-      footer { margin-top: 48px; padding-top: 24px; border-top: 1px solid #ddd; text-align: center; color: var(--subtle-text); }
-      a { color: #0066cc; text-decoration: none; }
-      a:hover { text-decoration: underline; }
+
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 12px;
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: 1.8rem;
+        margin-bottom: 16px;
+        font-weight: 600;
+      }
+
+      p, li {
+        color: var(--subtle-text);
+        font-size: 1rem;
+      }
+
+      .hero {
+        margin-top: 40px;
+        text-align: center;
+      }
+
+      .hero img {
+        max-width: 160px;
+        margin-bottom: 24px;
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      .tagline {
+        font-size: 1.3rem;
+        color: var(--primary-color);
+        margin: 0 auto;
+        max-width: 600px;
+      }
+
+      section {
+        margin-top: 60px;
+        background: var(--section-bg);
+        padding: 40px 32px;
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      ul {
+        padding-left: 20px;
+      }
+
+      li {
+        margin-bottom: 12px;
+      }
+
+      footer {
+        margin-top: 80px;
+        padding-top: 32px;
+        border-top: 1px solid #333;
+        text-align: center;
+        color: var(--subtle-text);
+      }
+
+      a {
+        color: var(--primary-color);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        .container { padding: 32px 16px; }
+        h1 { font-size: 2.2rem; }
+        h2 { font-size: 1.5rem; }
+      }
     </style>
   </head>
   <body>
     <div class="container">
       <!-- HERO -->
       <header class="hero">
-      <img src="/logo.png" alt="Nexfase Logo" style="max-width: 400px; display: block; margin-bottom: 16px;" />
-      
+        <img src="/logo.png" alt="Nexfase Logo" style="max-width: 300px; display: block; margin-bottom: 16px;"/>
+        <h1>{site.name}</h1>
         <p class="tagline">{site.tagline}</p>
       </header>
 
@@ -64,7 +136,7 @@ const site = {
           the focus is on stability, fast support, and smooth daily operations.
         </p>
         <p>
-          The aim is simple: make sure your ordering, procurement,
+          The goal is simple: ensure your ordering, procurement,
           and supply-chain systems stay reliable every day.
         </p>
       </section>
