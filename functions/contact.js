@@ -5,26 +5,13 @@ export async function onRequestPost({ request }) {
   const email = formData.get("email");
   const message = formData.get("message");
 
-  // Replace with your email
   const YOUR_EMAIL = "dongjie@nexfase.com.au";
 
   const payload = {
-    personalizations: [
-      {
-        to: [{ email: YOUR_EMAIL }],
-      },
-    ],
-    from: {
-      email: "no-reply@nexfase.com.au", // Must use your domain
-      name: "Nexfase Website",
-    },
+    personalizations: [{ to: [{ email: YOUR_EMAIL }] }],
+    from: { email: "no-reply@nexfase.com.com", name: "Nexfase Website" },
     subject: `New Contact Form Submission from ${name}`,
-    content: [
-      {
-        type: "text/plain",
-        value: `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
-      },
-    ],
+    content: [{ type: "text/plain", value: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}` }],
   };
 
   const response = await fetch("https://api.mailchannels.net/tx/v1/send", {
@@ -33,9 +20,7 @@ export async function onRequestPost({ request }) {
     body: JSON.stringify(payload),
   });
 
-  if (response.ok) {
-    return new Response("Message sent successfully!", { status: 200 });
-  } else {
-    return new Response("Failed to send message.", { status: 500 });
-  }
+  if (response.ok) return new Response("Message sent successfully!", { status: 200 });
+  return new Response("Failed to send message.", { status: 500 });
 }
+
